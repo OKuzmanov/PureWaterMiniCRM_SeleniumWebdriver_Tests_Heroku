@@ -1,0 +1,30 @@
+-------------------------------------------------------------------------------
+Test set: bg.softuni.seleniumwebdrivertests.tests.AddProductsPageTests
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.963 s <<< FAILURE! - in bg.softuni.seleniumwebdrivertests.tests.AddProductsPageTests
+test_pageLoadsCorrectly  Time elapsed: 1.168 s  <<< ERROR!
+org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=111.0.5563.147)
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9d6632e29fc3ff8e5dd540e9b0de6e76, findElement {using=css selector, value=h2.text-center.text-white}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.147, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\Oleg\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:58079}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58079/devtoo..., se:cdpVersion: 111.0.5563.147, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d6632e29fc3ff8e5dd540e9b0de6e76
+	at bg.softuni.seleniumwebdrivertests.tests.AddProductsPageTests.preTestsSetup(AddProductsPageTests.java:18)
+
+test_validationsWorkCorrectly  Time elapsed: 0.027 s  <<< ERROR!
+org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=111.0.5563.147)
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9d6632e29fc3ff8e5dd540e9b0de6e76, get {url=https://web-production-fcb8.up.railway.app/users/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.147, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\Oleg\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:58079}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58079/devtoo..., se:cdpVersion: 111.0.5563.147, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d6632e29fc3ff8e5dd540e9b0de6e76
+	at bg.softuni.seleniumwebdrivertests.tests.AddProductsPageTests.preTestsSetup(AddProductsPageTests.java:16)
+
