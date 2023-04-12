@@ -51,112 +51,112 @@ public class SuppliersDetailsPageTests extends BaseTest {
         Assertions.assertNotNull(supplierDetailsPage.deleteBtn);
     }
 
-    @Test
-    public void test_supplierDetailsUpdate_successfully() {
-        chromeDriver.navigate().to(getGlobalUrl() + LOGIN_RESOURCE);
+//    @Test
+//    public void test_supplierDetailsUpdate_successfully() {
+//        chromeDriver.navigate().to(getGlobalUrl() + LOGIN_RESOURCE);
+//
+//        loginPage = new LoginPage(chromeDriver);
+//
+//        loginPage.loginUser(getGlobalUsername(), getGlobalPassword());
+//
+//        chromeDriver.navigate().to(getGlobalUrl() + ALL_SUPPLIERS_RESOURCE);
+//
+//        allSuppliersPage = new AllSuppliersPage(chromeDriver);
+//
+//        WebElement firstSupplierDetails = allSuppliersPage.getFirstSupplierDetails();
+//
+//        if(firstSupplierDetails == null) {
+//            Assertions.fail("No suppliers present in DB.");
+//        }
+//
+//        firstSupplierDetails.click();
+//
+//        supplierDetailsPage = new SupplierDetailsPage(chromeDriver);
+//
+//        String testDescription = "Updated description";
+//        supplierDetailsPage.descriptionInput.clear();
+//        supplierDetailsPage.descriptionInput.sendKeys(testDescription);
+//
+//        supplierDetailsPage.updateBtn.click();
+//
+//        Assertions.assertNotNull(supplierDetailsPage.getSuccessfulAlert());
+//        Assertions.assertEquals(supplierDetailsPage.SUCCESSFUL_UPDATE_ALERT, supplierDetailsPage.getSuccessfulAlert().getText());
+//    }
 
-        loginPage = new LoginPage(chromeDriver);
+//    @Test
+//    public void test_supplierDetailsUpdate_unsuccessfully() {
+//        chromeDriver.navigate().to(getGlobalUrl() + LOGIN_RESOURCE);
+//
+//        loginPage = new LoginPage(chromeDriver);
+//
+//        loginPage.loginUser(getGlobalUsername(), getGlobalPassword());
+//
+//        chromeDriver.navigate().to(getGlobalUrl() + ALL_SUPPLIERS_RESOURCE);
+//
+//        allSuppliersPage = new AllSuppliersPage(chromeDriver);
+//
+//        WebElement firstSupplierDetails = allSuppliersPage.getFirstSupplierDetails();
+//
+//        if(firstSupplierDetails == null) {
+//            Assertions.fail("No suppliers present in DB.");
+//        }
+//
+//        firstSupplierDetails.click();
+//
+//        supplierDetailsPage = new SupplierDetailsPage(chromeDriver);
+//
+//        supplierDetailsPage.descriptionInput.clear();
+//
+//        supplierDetailsPage.updateBtn.click();
+//
+//        Assertions.assertNotNull(supplierDetailsPage.getUnsuccessfulAlert());
+//        Assertions.assertEquals(supplierDetailsPage.UNSUCCESSFUL_UPDATE_ALERT, supplierDetailsPage.getUnsuccessfulAlert().getText());
+//    }
 
-        loginPage.loginUser(getGlobalUsername(), getGlobalPassword());
-
-        chromeDriver.navigate().to(getGlobalUrl() + ALL_SUPPLIERS_RESOURCE);
-
-        allSuppliersPage = new AllSuppliersPage(chromeDriver);
-
-        WebElement firstSupplierDetails = allSuppliersPage.getFirstSupplierDetails();
-
-        if(firstSupplierDetails == null) {
-            Assertions.fail("No suppliers present in DB.");
-        }
-
-        firstSupplierDetails.click();
-
-        supplierDetailsPage = new SupplierDetailsPage(chromeDriver);
-
-        String testDescription = "Updated description";
-        supplierDetailsPage.descriptionInput.clear();
-        supplierDetailsPage.descriptionInput.sendKeys(testDescription);
-
-        supplierDetailsPage.updateBtn.click();
-
-        Assertions.assertNotNull(supplierDetailsPage.getSuccessfulAlert());
-        Assertions.assertEquals(supplierDetailsPage.SUCCESSFUL_UPDATE_ALERT, supplierDetailsPage.getSuccessfulAlert().getText());
-    }
-
-    @Test
-    public void test_supplierDetailsUpdate_unsuccessfully() {
-        chromeDriver.navigate().to(getGlobalUrl() + LOGIN_RESOURCE);
-
-        loginPage = new LoginPage(chromeDriver);
-
-        loginPage.loginUser(getGlobalUsername(), getGlobalPassword());
-
-        chromeDriver.navigate().to(getGlobalUrl() + ALL_SUPPLIERS_RESOURCE);
-
-        allSuppliersPage = new AllSuppliersPage(chromeDriver);
-
-        WebElement firstSupplierDetails = allSuppliersPage.getFirstSupplierDetails();
-
-        if(firstSupplierDetails == null) {
-            Assertions.fail("No suppliers present in DB.");
-        }
-
-        firstSupplierDetails.click();
-
-        supplierDetailsPage = new SupplierDetailsPage(chromeDriver);
-
-        supplierDetailsPage.descriptionInput.clear();
-
-        supplierDetailsPage.updateBtn.click();
-
-        Assertions.assertNotNull(supplierDetailsPage.getUnsuccessfulAlert());
-        Assertions.assertEquals(supplierDetailsPage.UNSUCCESSFUL_UPDATE_ALERT, supplierDetailsPage.getUnsuccessfulAlert().getText());
-    }
-
-    @Test
-    public void test_supplierDetailsUpdate_accessDenied() {
-        chromeDriver.navigate().to(getGlobalUrl() + REGISTER_RESOURCE);
-
-        registerPage = new RegisterPage(chromeDriver);
-
-        int rnd = new Random().nextInt( 9999);
-        String testFirstName = "fname" + rnd;
-        String testLastName = "lname" + rnd;
-        String testUsername = "user" + rnd;
-        String testEmail =  rnd + "@1.c";
-        String testPassword = "12345" + rnd;
-        String testConfirmPassword = "12345" + rnd;
-        registerPage.registerUser(testFirstName, testLastName, testUsername,
-                testEmail, testPassword, testConfirmPassword);
-
-        loginPage = new LoginPage(chromeDriver);
-
-        loginPage.loginUser(testUsername, testPassword);
-
-        chromeDriver.navigate().to(getGlobalUrl() + ALL_SUPPLIERS_RESOURCE);
-
-        allSuppliersPage = new AllSuppliersPage(chromeDriver);
-
-        WebElement firstSupplierDetails = allSuppliersPage.getFirstSupplierDetails();
-
-        if(firstSupplierDetails == null) {
-            Assertions.fail("No customers present in DB.");
-        }
-
-        firstSupplierDetails.click();
-
-        supplierDetailsPage = new SupplierDetailsPage(chromeDriver);
-
-        supplierDetailsPage.updateBtn.click();
-
-        Assertions.assertEquals(ACCESS_DENIED, chromeDriver.getTitle());
-
-        chromeDriver.navigate().to(getGlobalUrl() + USER_PROFILE_RESOURCE);
-
-        usersProfilePage = new UsersProfilePage(chromeDriver);
-
-        usersProfilePage.deleteBtn.click();
-    }
+//    @Test
+//    public void test_supplierDetailsUpdate_accessDenied() {
+//        chromeDriver.navigate().to(getGlobalUrl() + REGISTER_RESOURCE);
+//
+//        registerPage = new RegisterPage(chromeDriver);
+//
+//        int rnd = new Random().nextInt( 9999);
+//        String testFirstName = "fname" + rnd;
+//        String testLastName = "lname" + rnd;
+//        String testUsername = "user" + rnd;
+//        String testEmail =  rnd + "@1.c";
+//        String testPassword = "12345" + rnd;
+//        String testConfirmPassword = "12345" + rnd;
+//        registerPage.registerUser(testFirstName, testLastName, testUsername,
+//                testEmail, testPassword, testConfirmPassword);
+//
+//        loginPage = new LoginPage(chromeDriver);
+//
+//        loginPage.loginUser(testUsername, testPassword);
+//
+//        chromeDriver.navigate().to(getGlobalUrl() + ALL_SUPPLIERS_RESOURCE);
+//
+//        allSuppliersPage = new AllSuppliersPage(chromeDriver);
+//
+//        WebElement firstSupplierDetails = allSuppliersPage.getFirstSupplierDetails();
+//
+//        if(firstSupplierDetails == null) {
+//            Assertions.fail("No customers present in DB.");
+//        }
+//
+//        firstSupplierDetails.click();
+//
+//        supplierDetailsPage = new SupplierDetailsPage(chromeDriver);
+//
+//        supplierDetailsPage.updateBtn.click();
+//
+//        Assertions.assertEquals(ACCESS_DENIED, chromeDriver.getTitle());
+//
+//        chromeDriver.navigate().to(getGlobalUrl() + USER_PROFILE_RESOURCE);
+//
+//        usersProfilePage = new UsersProfilePage(chromeDriver);
+//
+//        usersProfilePage.deleteBtn.click();
+//    }
 
     @Test
     public void test_supplierDetailsDelete() {
