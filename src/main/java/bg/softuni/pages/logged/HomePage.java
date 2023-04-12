@@ -80,7 +80,7 @@ public class HomePage extends BasePage {
     }
 
     public WebElement getFirstReadyLinkOrderTable() {
-        List<WebElement> tableRowsList = this.getOrdersTable().findElements(By.cssSelector("tr:not(.table-head)"));
+        List<WebElement> tableRowsList = this.getOrdersTable().findElements(By.cssSelector("div[class *= 'col-6'] > table > tbody > tr"));
         if (tableRowsList.size() == 0) {
             return null;
         }
